@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
         with:
           repository: huutawn/opsi
-          ref: 4b871dd786605a63fb508d60b722da688fdbd67d
+          ref: f782c84f60c1d657b11e7a74a2bd55f6c2ae31e1
           path: __opsi_tool_source
           persist-credentials: false
       - name: Set up pinned Go toolchain
@@ -148,7 +148,7 @@ jobs:
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
         with:
           repository: huutawn/opsi
-          ref: 4b871dd786605a63fb508d60b722da688fdbd67d
+          ref: f782c84f60c1d657b11e7a74a2bd55f6c2ae31e1
           path: __opsi_tool_source
           persist-credentials: false
       - name: Set up pinned Go toolchain
