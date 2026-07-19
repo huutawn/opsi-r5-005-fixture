@@ -7,7 +7,9 @@ services:
       dockerfile: services/api/Dockerfile
       platform: linux/amd64
     watchPaths: []
-    sharedPaths: []
+    sharedPaths:
+      - .github/workflows/opsi-cd.yaml
+      - .opsi/opsi-cd.yaml
     dependencies: []
     deploy:
       production:
@@ -23,7 +25,9 @@ services:
       dockerfile: services/worker/Dockerfile
       platform: linux/amd64
     watchPaths: []
-    sharedPaths: []
+    sharedPaths:
+      - .github/workflows/opsi-cd.yaml
+      - .opsi/opsi-cd.yaml
     dependencies: []
     deploy:
       production:
