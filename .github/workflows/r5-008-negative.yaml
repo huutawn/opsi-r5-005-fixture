@@ -30,7 +30,7 @@ jobs:
         run: |
           set -eu
           python3 scripts/e2e/verify-r5-008-negative-actions.py \
-            --mode suite \
+            --mode expect-forbidden \
             --cloud-url "$OPSI_CLOUD_URL" \
             --config-hash 419314c2e3eaea280cd2e58b41bba84b6472833053aedc7c59db4e359e97a242 \
             --plan-hash e65ab35fe0c791da96a310c9dbad67b0b7dc172cff90a5af92189162048d3eb3 \
