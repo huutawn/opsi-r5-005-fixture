@@ -1,0 +1,27 @@
+name: R5-008 Failed Build
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  failed-image-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fail image build before any submission
+        id: image
+        continue-on-error: true
+        run: printf 'this is not a Dockerfile\n' | docker build --file - .
+        shell: bash
+      - name: Submission remains unreachable
+        if: steps.image.outcome == 'success'
+        run: exit 1
+        shell: bash
+      - name: Assert the image build failed
+        env:
+          BUILD_OUTCOME: ${{ steps.image.outcome }}
+        run: test "$BUILD_OUTCOME" = failure
+        shell: bash
