@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
         with:
           repository: huutawn/opsi
-          ref: 3d7c9b519a4f1683e93e5864133d163cd86bf95d
+          ref: 47bcbc62a7df7de1e53cb0393eaa385779e1c0ff
           persist-credentials: false
       - name: Run sanitized negative and replay checks
         env:
