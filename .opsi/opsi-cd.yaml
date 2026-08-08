@@ -19,7 +19,7 @@ services:
       preview:
         enabled: false
         pullRequests: false
-  - key: worker
+  - key: web
     build:
       context: services/worker
       dockerfile: services/worker/Dockerfile
